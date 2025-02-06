@@ -14,6 +14,7 @@
 - [Ch1 JavaScript 物件](#ch1-javascript-物件)
 - [Ch2 JavaScript 應用物件與屬性](#ch2-javascript-應用物件與屬性)
 - [Ch3 Object()](#ch3-object)
+- [Ch4 Function()](#ch4-function)
 
 
 ---
@@ -208,7 +209,7 @@ console.log('toString' in myObject) // true
 ```
 let cody = {
     age: 23,
-    gender: 'male',
+    gender: 'male' // 物件最後一項逗號要移除，在某些環境會發生錯誤
 }
 
 for (let key in cody){
@@ -241,4 +242,67 @@ for(let x in window.document){
 
 
 ## Ch3 Object()
+
+### 使用 Object() 創建一個物件
+
+沒帶上參數會預設為 null 或是 undefined
+
+```
+let a = new Object('foo') // String {'foo'}
+```
+
+---
+
+### *Object() 屬性與方法
+
+屬性
+
+- prototype
+
+### *Object() 物件實例屬性與方法
+
+屬性
+
+- constructor
+
+方法
+
+- hasOwnProperty()
+- isPrototypeOf()
+- propertyIsEnumerable()
+- toLocaleString()
+- toString()
+- valueOf()
+
+原型鏈以 Object.prototype 結束，因此 JavaScript 物件會繼承 Object() 的所有屬性和方法
+
+---
+
+
+### 使用物件字面值（object literal）建立 Object 物件
+
+```
+let cody = {
+    age: 23,
+    gender: 'male'
+}
+```
+
+---
+
+### 從 `Object.prototype` 繼承的所有物件
+
+```
+Object.prototype.foo = 'foo'
+
+let myString = 'bar';
+
+console.log(myString.foo) // foo 從 Object.prototype 繼承
+```
+
+加到 Object.prototype 裡的事物都會在 `for...in` 迴圈 和原型鏈中顯示，所以要小心使用，可以的話不要用。
+
+---
+
+## Ch4 Function()
 
