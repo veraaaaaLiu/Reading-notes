@@ -1,4 +1,4 @@
 # 讀書摘要
 
 
-- [JavaScript-Enlightenment](./JavaScript-Enlightenment/README.md)
+- [JavaScript 深入精要](./JavaScript-Enlightenment/README.md)
