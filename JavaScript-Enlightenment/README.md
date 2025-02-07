@@ -66,6 +66,8 @@ const myNumberLiteral = 23; // 原始數字值，不是物件
 - booleans
 - null
 - undefined
+- BigInt
+- Symbol
 
 Ｑ 如何 儲存 / 複製 原始值？
 
@@ -306,3 +308,43 @@ console.log(myString.foo) // foo 從 Object.prototype 繼承
 
 ## Ch4 Function()
 
+
+---
+
+## Ch12 Boolean
+
+會是 false 的情況 
+
+- 0
+- -0
+- null
+- false
+- undefined
+- '' 空字串
+- Nan
+
+
+
+---
+
+## Ch14 Null
+
+某個物件屬性沒有值，會設定成 null，將來可能會有值
+
+```
+console.log(typeof null) // object
+```
+
+驗證 null 值時，一定要使用 ===，因為 == 無法分辨 null 和 undefined
+```
+let myObject = null;
+
+console.log(myObject === null) // true
+```
+
+---
+
+## Ch15 undefined 
+
+1. 已宣告的變數，但並未賦值
+2. 嘗試存取的變數尚未被定義，而且無法在原型鏈中找到
